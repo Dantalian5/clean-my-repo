@@ -1,6 +1,6 @@
 {
     "name": "clean-my-repo",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "description": "Herramienta CLI para limpiar y organizar repositorios fácilmente",
     "bin": {
         "clean-my-repo": "./dist/index.js"
