@@ -1,26 +1,46 @@
 {
     "name": "clean-my-repo",
     "version": "1.0.0",
-    "description": "",
-    "type": "module",
-    "main": "index.js",
-    "keywords": [],
-    "author": "Dantalian5",
-    "license": "ISC",
+    "description": "Herramienta CLI para limpiar y organizar repositorios fácilmente",
+    "bin": {
+        "clean-my-repo": "./dist/index.js"
+    },
+    "files": [
+        "dist"
+    ],
+    "keywords": [
+        "git",
+        "repository",
+        "clean",
+        "organize",
+        "cli",
+        "tool"
+    ],
+    "author": "Dantalian5 (https://github.com/Dantalian5)",
+    "license": "MIT",
     "scripts": {
+        "build": "tsc && chmod +x dist/index.js",
+        "prepublishOnly": "npm run build",
         "test": "jest --config jest.config.ts",
         "test:watch": "jest --watch --config jest.config.ts"
     },
     "dependencies": {
-        "fs": "^0.0.1-security",
-        "inquirer": "^12.0.1",
-        "typescript": "^5.6.3"
+        "inquirer": "^12.0.1"
     },
     "devDependencies": {
         "@types/jest": "^29.5.14",
         "jest": "^29.7.0",
         "prettier": "^3.3.3",
         "ts-jest": "^29.2.5",
-        "ts-node": "^10.9.2"
+        "ts-node": "^10.9.2",
+        "typescript": "^5.6.3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Dantalian5/clean-my-repo.git"
+    },
+    "homepage": "https://github.com/Dantalian5/clean-my-repo#readme",
+    "bugs": {
+        "url": "https://github.com/Dantalian5/clean-my-repo/issues"
     }
 }

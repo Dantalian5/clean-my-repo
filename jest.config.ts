@@ -1,19 +1,14 @@
+// jest.config.ts
 import type { Config } from 'jest';
 
 const config: Config = {
     preset: 'ts-jest',
     testEnvironment: 'node',
-    moduleFileExtensions: ['ts', 'js'], // Asegúrate de incluir 'ts' y 'js'
-    transform: {
-        '^.+\\.(ts|js)$': 'ts-jest', // Transforma tanto archivos .ts como .js
-    },
     testMatch: ['**/*.test.ts'],
-    globals: {
-        'ts-jest': {
-            isolatedModules: true,
-        },
+    moduleFileExtensions: ['ts', 'js'],
+    transform: {
+        '^.+\\.tsx?$': 'ts-jest',
     },
-    verbose: true,
 };
 
 export default config;
