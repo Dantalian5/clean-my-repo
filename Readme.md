@@ -54,7 +54,7 @@
 
 ## About The Project
 
-**Clean My Repo** helps you maintain your repositories by removing unnecessary files and folders, and by initializing your `.gitignore` file with predefined templates for various environments and programming languages.
+**Clean My Repo** is an opinionated CLI tool designed to help you maintain a clutter-free repository by removing unnecessary files and folders and initializing your .gitignore file with predefined templates. The templates are based on common structures and best practices for cleaning repositories across various environments and programming languages.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,22 +99,31 @@ npm install
 
 To initialize your .gitignore with a specific template:
 ```bash
-npx clean-my-repo --init [template]
+npx clean-my-repo --init -i [template]
 ``` 
 **Example:**
 ```bash
 npx clean-my-repo --init node
 ```
+*If no template is selected, the tool will default to the “default” template.*
 
 ### Clean the Repository
 To clean up unwanted files and folders:
 ```bash
-npx clean-my-repo --clean [template]
+npx clean-my-repo --clean -c [template]
 ```
 **Example:**
 ```bash
 npx clean-my-repo --clean build
 ```
+*If no template is selected, the tool will default to the “default” template.*
+
+### Use and save preferences
+To clean up unwanted files and folders:
+```bash
+npx clean-my-repo 
+```
+When running the tool without arguments, an interactive series of prompts will guide the user through selecting actions and choosing templates to use. These preferences will be saved for future use, allowing for easy reuse of configurations.
 
 ### Options:
 •	--init, -i [template]: Initializes .gitignore with the specified template.
